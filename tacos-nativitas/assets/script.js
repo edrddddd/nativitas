@@ -54,12 +54,7 @@ function initMenuToggle() {
   });
 }
 
-/* ---------- Efecto de texto en arco/onda ----------
-   Envuelve cada letra de .arc-link en un <span>,
-   y aplica una curva (seno) para que el texto
-   forme un arco, como en el menú de Atarantados.
-   data-curve="up" | "down" controla la dirección.
-------------------------------------------------- */
+/* ---------- Efecto de texto en arco/onda ----------*/
 function initArcText() {
   var links = document.querySelectorAll(".arc-link");
 
