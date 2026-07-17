@@ -9,6 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=Bungee&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -55,18 +58,12 @@
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-              Abierto todos los días de 1 p.m. a 12 a.m.
+              Abierto todos los días de 1 p.m. a 12 a.m.
             </li>
           </ul>
           <a href="https://maps.app.goo.gl/RTB3eeGHLWB7NbaJ8" target="_blank" rel="noopener" class="btn btn-fill" style="margin-top:8px;">Cómo llegar</a>
         </div>
-        <iframe
-          class="sucursal-map"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps/d/embed?mid=1LxYnnKmuCnqDzo8Tr6m4HTbXPT3OFjM&ehbc=2E312F&noprof=1"
-          title="Mapa de ubicación de Tacos Nativitas">
-        </iframe>
+        <div id="map-torres-chicas" class="sucursal-map"></div>
       </div>
       <div class="sucursal-card">
         <div class="sucursal-info">
@@ -91,13 +88,7 @@
           </ul>
           <a href="https://www.google.com/maps/search/?api=1&query=Av.+Venustiano+Carranza+305+Col.+Cuauht%C3%A9moc+Toluca" target="_blank" rel="noopener" class="btn btn-fill" style="margin-top:8px;">Cómo llegar</a>
         </div>
-        <iframe
-          class="sucursal-map"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps/d/embed?mid=1G7Gc1NckyteypuTo18M_UhTAo-pVgPw&ehbc=2E312F&noprof=1"
-          title="Mapa de ubicación de Tacos Nativitas">
-        </iframe>
+        <div id="map-carranza" class="sucursal-map"></div>
       </div>
 
       <p style="text-align:center; font-size:14px; color:#555; max-width:600px; margin:40px auto 0; line-height:1.7;">
@@ -175,5 +166,59 @@
   </footer>
 
   <script src="assets/script.js"></script>
+
+  <script>
+
+    function crearPinNativitas() {
+      const svg = `
+        <svg viewBox="0 0 36 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 0C8.06 0 0 8.06 0 18c0 13.5 18 30 18 30s18-16.5 18-30C36 8.06 27.94 0 18 0z"
+                fill="#ff8c00" stroke="#1f3c56" stroke-width="2"/>
+          <circle cx="18" cy="18" r="10" fill="#1f3c56"/>
+          <path d="M11 15c0-3.87 3.13-7 7-7s7 3.13 7 7H11z" fill="#fff"/>
+          <rect x="10.5" y="15" width="15" height="2.5" rx="1.25" fill="#fff"/>
+          <path d="M12 17.5c1 3 3.2 5 6 5s5-2 6-5" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+        </svg>`;
+      return L.divIcon({
+        className: "pin-nativitas",
+        html: svg,
+        iconSize: [34, 46],
+        iconAnchor: [17, 46],
+        popupAnchor: [0, -42]
+      });
+    }
+
+    const pinIcon = crearPinNativitas();
+
+    const mapTorresChicas = L.map('map-torres-chicas', { scrollWheelZoom: false }).setView([19.2875962, -99.6933592], 16);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; by edrddddd &copy;',
+      subdomains: 'abcd',
+      maxZoom: 20
+    }).addTo(mapTorresChicas);
+
+    L.marker([19.2875962, -99.6933592], { icon: pinIcon })
+      .addTo(mapTorresChicas)
+      .bindPopup(
+        "<strong>Tacos Nativitas — Torres Chicas</strong><br>" +
+        "Av Torres Chicas 509, Miguel Hidalgo, 50100 Toluca de Lerdo, Méx.<br>" +
+        "+52 729 320 9571"
+      );
+
+    const mapCarranza = L.map('map-carranza', { scrollWheelZoom: false }).setView([19.2791394, -99.6522913], 16);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; by edrddddd &copy;',
+      subdomains: 'abcd',
+      maxZoom: 20
+    }).addTo(mapCarranza);
+
+    L.marker([19.2791394, -99.6522913], { icon: pinIcon })
+      .addTo(mapCarranza)
+      .bindPopup(
+        "<strong>Tacos Nativitas — Carranza</strong><br>" +
+        "Av. Venustiano Carranza No. 305, Col. Cuauhtémoc, Toluca, C.P. 50130<br>" +
+        "722 270 2389"
+      );
+  </script>
 </body>
 </html>

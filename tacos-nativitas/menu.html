@@ -9,27 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=Bungee&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
-  <style>
-    /* --- Complemento para tablas de precios múltiples (sencilla/con queso/por kilo) --- */
-    .menu-price-table{width:100%;border-collapse:collapse;font-size:14px;}
-    .menu-price-table caption{text-align:left;font-weight:700;margin-bottom:4px;}
-    .menu-price-table th{
-      font-size:11px;text-transform:uppercase;letter-spacing:.03em;
-      color:#ff8c00;padding:2px 6px;text-align:right;font-weight:700;
-    }
-    .menu-price-table th:first-child{text-align:left;}
-    .menu-price-table td{padding:4px 6px;border-top:1px dashed rgba(0,0,0,.15);}
-    .menu-price-table td:first-child{text-align:left;font-weight:600;}
-    .menu-price-table td:not(:first-child){text-align:right;white-space:nowrap;}
-    .menu-price-table tbody tr:first-child td{border-top:none;}
-    .menu-subnote{font-size:12px;color:#777;margin:4px 0 10px;}
-    .menu-card-title{
-      font-family:'Bungee', sans-serif; color:#1f3c56; font-size:22px;
-      margin:44px 0 16px; text-align:center; letter-spacing:.02em;
-    }
-    .menu-card-title:first-of-type{margin-top:0;}
-    .menu-card-block + .menu-card-block{margin-top:10px;}
-  </style>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -58,10 +38,6 @@
   <main id="main" class="bg-tile menu-page">
     <div class="container">
       <h1 class="menu-page-title">Menú</h1>
-
-      <!-- ============================================================ -->
-      <!-- CARTA 1: Bienvenida / Caldos y consomés / Bebidas / Cervezas -->
-      <!-- ============================================================ -->
       <h2 class="menu-card-title" style="color:#a4c138;">Caldos, bebidas y cervezas</h2>
       <div class="menu-board">
         <div class="menu-board-side" aria-hidden="true">NATIVITAS&nbsp;&nbsp;MENÚ</div>
@@ -87,7 +63,6 @@
               <p class="menu-subnote">¡Un buen caldito para el corazón!</p>
             </div>
 
-            <!-- BEBIDAS -->
             <div class="menu-group menu-card-block">
               <h3>Bebidas</h3>
               <div class="menu-row"><span>Agüita de fruta grande (2 L)</span><span>$80.00</span></div>
@@ -101,7 +76,6 @@
               <div class="menu-row"><span>Cafecito de olla</span><span>$20.00</span></div>
             </div>
 
-            <!-- CERVEZAS -->
             <div class="menu-group menu-card-block">
               <h3>Cervezas</h3>
               <div class="menu-row"><span>Clamatada</span><span>$60.00</span></div>
@@ -118,16 +92,12 @@
         </div>
       </div>
 
-      <!-- ============================================================ -->
-      <!-- CARTA 2: Especialidades Nativitas / Órdenes / Alambres        -->
-      <!-- ============================================================ -->
       <h2 class="menu-card-title" style="color:#a4c138;">Especialidades, órdenes y alambres</h2>
       <div class="menu-board">
         <div class="menu-board-side" aria-hidden="true">NATIVITAS&nbsp;&nbsp;MENÚ</div>
         <div class="menu-board-content">
           <div class="menu-cols menu-cols--3">
 
-            <!-- ESPECIALIDADES NATIVITAS -->
             <div class="menu-group menu-card-block">
               <h3>Especialidades Nativitas</h3>
               <div class="menu-row"><span>Especial arrachera</span><span>$250.00</span></div>
@@ -140,8 +110,6 @@
               <div class="menu-row"><span>Especial adobada</span><span>$150.00</span></div>
               <p class="menu-subnote">Todas las especialidades se sirven con ensalada, aguacate, papas y frijolitos. Cada ingrediente adicional tiene costo extra.</p>
             </div>
-
-            <!-- ÓRDENES -->
             <div class="menu-group menu-card-block">
               <h3>Órdenes</h3>
               <table class="menu-price-table">
@@ -164,8 +132,6 @@
               </table>
               <p class="menu-subnote">*Excepto filete y arrachera. Carne de primera calidad, no congelada. Las órdenes van acompañadas de tortillitas hechas a mano. Complementa tu orden con nopalito, cebollitas y guacamole.</p>
             </div>
-
-            <!-- ALAMBRES -->
             <div class="menu-group menu-card-block">
               <h3>Alambres</h3>
               <table class="menu-price-table">
@@ -188,17 +154,11 @@
           </div>
         </div>
       </div>
-
-      <!-- ============================================================ -->
-      <!-- CARTA 3: Al Pastor / Quesos / Suizos / Quesadillas            -->
-      <!-- ============================================================ -->
       <h2 class="menu-card-title" style="color:#a4c138;">Al pastor, quesos, suizos y quesadillas</h2>
       <div class="menu-board">
         <div class="menu-board-side" aria-hidden="true">NATIVITAS&nbsp;&nbsp;MENÚ</div>
         <div class="menu-board-content">
           <div class="menu-cols menu-cols--4">
-
-            <!-- AL PASTOR -->
             <div class="menu-group menu-card-block">
               <h3>Al pastor</h3>
               <table class="menu-price-table">
@@ -216,8 +176,6 @@
               </table>
               <p class="menu-subnote">Acompáñalos con nuestras salsitas y limoncito.</p>
             </div>
-
-            <!-- QUESOS -->
             <div class="menu-group menu-card-block">
               <h3>Quesos</h3>
               <div class="menu-row"><span>Mexicano con arrachera y salsa</span><span>$250.00</span></div>
@@ -226,16 +184,12 @@
               <div class="menu-row"><span>Toluqueño con chorizo y salsa</span><span>$160.00</span></div>
               <div class="menu-row"><span>Sencillo con queso manchego</span><span>$100.00</span></div>
             </div>
-
-            <!-- SUIZOS -->
             <div class="menu-group menu-card-block">
               <h3>Suizos</h3>
               <div class="menu-row"><span>De filete o arrachera</span><span>$250.00</span></div>
               <div class="menu-row"><span>De pechuga, chorizo, bistec o costilla</span><span>$165.00</span></div>
               <div class="menu-row"><span>De chuleta o pastor</span><span>$155.00</span></div>
             </div>
-
-            <!-- QUESADILLAS -->
             <div class="menu-group menu-card-block">
               <h3>Quesadillas</h3>
               <div class="menu-row"><span>Gringa de filete o arrachera</span><span>$170.00</span></div>
@@ -248,17 +202,11 @@
           </div>
         </div>
       </div>
-
-      <!-- ============================================================ -->
-      <!-- CARTA 4: Complementos / Postres                                -->
-      <!-- ============================================================ -->
       <h2 class="menu-card-title" style="color:#a4c138;">Complementos y postres</h2>
       <div class="menu-board">
         <div class="menu-board-side" aria-hidden="true" >NATIVITAS&nbsp;&nbsp;MENÚ</div>
         <div class="menu-board-content">
           <div class="menu-cols menu-cols--2">
-
-            <!-- COMPLEMENTOS -->
             <div class="menu-group menu-card-block">
               <h3>Complementos</h3>
               <p class="menu-subnote">¡Dale más sabor a tus platillos!</p>
@@ -273,8 +221,6 @@
               <div class="menu-row"><span>Tortillas de harina</span><span>$20.00</span></div>
               <div class="menu-row"><span>Orden de chilitos</span><span>$20.00</span></div>
             </div>
-
-            <!-- POSTRES -->
             <div class="menu-group menu-card-block">
               <h3>Postres</h3>
               <p class="menu-subnote">¡Y para rematar, un delicioso postre de la casa!</p>
@@ -282,21 +228,17 @@
               <div class="menu-row"><span>Duraznos en almíbar</span><span>$50.00</span></div>
               <div class="menu-row"><span>Chongos zamoranos</span><span>$50.00</span></div>
             </div>
-
           </div>
         </div>
       </div>
-
       <p style="text-align:center; font-size:13px; color:#777; margin-top:30px;">
         Precios sujetos a cambio sin previo aviso. Todas nuestras especialidades se sirven con aguacate, jitomate, frijoles, ensalada y nopales.
       </p>
-
       <div style="text-align:center; margin-top:36px;">
         <a href="contacto.html" class="btn btn-fill">Pide a domicilio</a>
       </div>
     </div>
   </main>
-
 <footer class="site-footer">
     <div class="container">
       <div class="footer-collage">

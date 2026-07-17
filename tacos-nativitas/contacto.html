@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=Bungee&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -134,7 +135,7 @@
 
   <script src="assets/script.js"></script>
   <script>
-    // Envío del formulario por WhatsApp (ajusta el número antes de publicar)
+
     document.getElementById('formContacto').addEventListener('submit', function (e) {
       e.preventDefault();
       var nombre = document.getElementById('nombre').value;
@@ -148,7 +149,6 @@
                   "Correo: " + email + "\n\n" +
                   "Mensaje: " + mensaje;
 
-      // TODO: reemplazar 52XXXXXXXXXX por el número real de WhatsApp del negocio
       var numeroWhatsApp = "527293209571";
       var url = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(texto);
       window.open(url, "_blank");
