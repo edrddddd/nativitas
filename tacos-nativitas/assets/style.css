@@ -13,11 +13,10 @@
   --negro: #161616;
   --naranja: #D4A017;
 
-  /* Tipografía */
   --font-display: "Bungee", "Arial Narrow", sans-serif;
   --font-body: "Archivo", "Helvetica Neue", Arial, sans-serif;
 
-  /* Layout */
+ 
   --container: 1240px;
   --header-h: 84px;
 }
@@ -186,7 +185,7 @@ button {
 }
 
 /* ============================================
-   MENÚ DROPDOWN 
+   MENÚ DD
    ============================================ */
 .nav-dropdown {
   position: absolute;
@@ -237,7 +236,7 @@ button {
 }
 
 /* ============================================
-    accesos rápidos (solo Inicio)
+    accesos encorto 
    ============================================ */
 .hero-arc {
   position: relative;
@@ -288,13 +287,11 @@ button {
 .arc-row--big .arc-link { font-size: clamp(34px, 7vw, 92px); }
 .arc-row--mid .arc-link { font-size: clamp(30px, 6.2vw, 80px); }
 
-/* La curvatura de cada letra se aplica vía JS (transform inline por <span>),
-   calculada dinámicamente según la longitud del texto en script.js */
 .arc-link .arc-char {
   display: inline-block;
 }
 
-/* En mobile: el arco se aplana, los links se apilan rectos y centrados, */
+/* En mobile: el arco se aplana */
 @media (max-width: 700px) {
   .arc-row {
     flex-direction: column;
@@ -311,7 +308,7 @@ button {
 }
 
 /* ============================================
-   BOTONES
+   BOTONESSS
    ============================================ */
 .btn {
   display: inline-block;
@@ -435,7 +432,7 @@ button {
 }
 
 /* ============================================
-   QUIÉNES SOMOS — imagen + bloque 
+   QNSS
    ============================================ */
 .somos {
   padding: 70px 0 110px;
@@ -485,7 +482,7 @@ button {
 }
 
 /* ============================================
-   TARJETAS DE ESPECIALIDAD (home)
+   TARJETAS DE ESPECIALIDAD
    ============================================ */
 .especialidades {
   padding: 100px 0;
@@ -568,7 +565,7 @@ button {
 }
 
 /* ============================================
-   POR QUÉ ELEGIRNOS
+   PQE
    ============================================ */
 .porque {
   padding: 90px 0;
@@ -613,7 +610,7 @@ button {
 }
 
 /* ============================================
-   MENÚ — tarjeta tipo "papel" estilo Atarantados
+   MENÚ — tarjeta tipo papel
    ============================================ */
 .menu-page {
   padding-top: calc(var(--header-h) + 50px);
@@ -793,7 +790,7 @@ button {
 }
 
 /* ============================================
-   CONTACTO — bloque verde con inputs blancos
+   CONTACTO — bloque con inputs
    ============================================ */
 .contacto-page {
   padding-top: calc(var(--header-h) + 60px);
@@ -876,7 +873,7 @@ button {
 }
 
 /* ============================================
-   FOOTER — collage estilo Atarantados
+   FOOTER — collage
    ============================================ */
 .site-footer {
   background: var(--verde);
@@ -1083,11 +1080,7 @@ footer > * {
   border-radius: 8px;
 }
 /* ============================================
-   PLACEHOLDERS DE FOTO
-   Sustituir por fotos reales del negocio:
-   basta cambiar el <img src="..."> en el HTML,
-   estas clases solo dan un fondo de cortesía
-   mientras tanto.
+   PLACEHOLDERS DE FOTO PH
    ============================================ */
 .ph-photo {
   display: flex;
@@ -1154,7 +1147,7 @@ select:focus-visible {
     .footer-grid { grid-template-columns: 1fr; }
     .footer { padding: 3rem 1.5rem; }
   }
-    /* --- Complemento para la sección de Servicios (banquetes) --- */
+    /* --- Complemento para la sección de Servicios  --- */
     .servicios-hero{
       position:relative; border-radius:18px; overflow:hidden;
       margin-bottom:40px; min-height:340px;
