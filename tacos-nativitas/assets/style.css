@@ -1260,3 +1260,33 @@ select:focus-visible {
     .pin-nativitas { position: relative; width: 34px; height: 46px; }
     .pin-nativitas svg { width: 100%; height: 100%; filter: drop-shadow(0 3px 4px rgba(0,0,0,.35)); }
     .leaflet-popup-content { font-family: 'Archivo', sans-serif; font-size: 13px; line-height: 1.5; }
+
+    /* ===== Tablas de menú escalan  ===== */
+.menu-price-table{
+  table-layout: fixed;
+  font-size: clamp(10px, 3vw, 14px);
+}
+
+.menu-price-table th,
+.menu-price-table td{
+  padding: clamp(2px, 0.8vw, 6px) clamp(2px, 1.2vw, 6px);
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+@media (max-width: 480px){
+  .menu-price-table td:not(:first-child),
+  .menu-price-table th:not(:first-child){
+    white-space: normal;
+  }
+
+  .menu-price-table th{
+    font-size: clamp(8px, 2.6vw, 11px);
+    letter-spacing: 0;
+  }
+
+  .menu-price-table th:first-child,
+  .menu-price-table td:first-child{
+    width: 32%;
+  }
+}
